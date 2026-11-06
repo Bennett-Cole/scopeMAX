@@ -1,0 +1,17 @@
+{
+  "name": "scope-ai-mac",
+  "version": "0.1.0",
+  "description": "Scope AI floating macOS desktop assistant prototype",
+  "main": "src/main.js",
+  "author": "Scope AI",
+  "license": "UNLICENSED",
+  "scripts": { "start": "electron .", "dist": "electron-builder --mac dmg zip" },
+  "devDependencies": { "electron": "^34.0.0", "electron-builder": "^25.1.8" },
+  "build": {
+    "appId": "one.scopeai.desktop",
+    "productName": "Scope AI",
+    "mac": { "category": "public.app-category.productivity", "target": ["dmg", "zip"], "icon": "assets/scope-icon.icns" },
+    "files": ["src/**/*", "assets/**/*", "package.json"],
+    "asar": true
+  }
+}
